@@ -1,0 +1,13 @@
+checks:
+  endpoints:
+    type: nrpe
+    stage: restart_service
+    command: check_endpoints_eventlogging-service-eventbus
+  depool:
+    type: command
+    stage: promote
+    command: depool-eventbus
+  repool:
+    type: command
+    stage: restart_service
+    command: pool-eventbus
