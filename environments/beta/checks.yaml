@@ -1,0 +1,15 @@
+checks:
+  endpoints:
+    type: nrpe
+    stage: restart_service
+    command: check_endpoints_eventlogging-service-eventbus
+  depool:
+    type: command
+    stage: promote
+    # depool-eventbus command doesn't exist in beta?  Use depool eventbus instead.
+    command: depool eventbus
+  repool:
+    type: command
+    stage: restart_service
+    # pool-eventbus command doesn't exist in beta?  Use pool eventbus instead.
+    command: pool eventbus
