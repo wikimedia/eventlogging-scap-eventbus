@@ -6,10 +6,10 @@ checks:
   depool:
     type: command
     stage: promote
-    # depool-eventbus command doesn't exist in beta?  Use depool eventbus instead.
-    command: depool eventbus
+    # depool-eventbus command doesn't exist in beta?
+    command: /bin/true
   repool:
     type: command
     stage: restart_service
-    # pool-eventbus command doesn't exist in beta?  Use pool eventbus instead.
-    command: pool eventbus
+    # pool-eventbus command doesn't exist in beta?
+    command: /bin/true
